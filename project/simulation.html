@@ -1,0 +1,127 @@
+<!doctype html>
+<html> 
+ <head> 
+  <style>
+     #Simulation
+     {
+       
+      background-color: white; 
+width: 100%; 
+height: 500px;
+ float: left;
+ color: blue;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+     }  
+   </style> 
+ </head> 
+ <body> 
+    <center>
+        <h2 style="font-weight: bolder; font-size: 50px; padding-top: 0%;color:#000080; background-color: rgb(134, 190, 240);"><img src="logo.jpg" width="100" height="100" alt=""> Virtual Lab</h2> 
+         <hr> 
+         <h2 style="color:#0040ff; background-color: gray;">Euclidean Algorithm</h2> <
+         <hr> 
+        </center> 
+  <section id="Simulation">
+    <table broder="0" width="100%" bgcolor="red" height="8%">
+        <tr>
+            <th width="14%"><a href="aim.html"><font color="white" size="4">Aim</a></font></th>
+            <th width="14%"><a href="theory.html"><font color="white" size="4">Theory</a></font></th>
+            <th width="14%"><a href="algo.html"><font color="white" size="4">Algorithm</a></font></th>
+            <th width="14%"><a href="flow.html"><font color="white" size="4">Flowchart</a></font></th>
+            <th width="14%"><a href="procedure.html"><font color="white" size="4">Procedure</a></font></th>
+            <th width="14%"><a href="simulation.html"><font color="white" size="4">Simulation</a></font></th>
+            <th width="14%"><a href="refer.html"><font color="white" size="4">Reference</a></font></th>
+        </tr>
+      </table><center>
+   <h3 style="color:#307D7E; font-size:200%;">Simulation:</h3> 
+   </center>
+   <style>
+        .main{
+            background-color: #808080; 
+            margin: auto;
+            width: 40%;
+            
+            padding: 10px;
+            margin-top: 100px;
+        }
+
+        .head{
+            background-color: #B0B0B0  ;
+            padding: 2px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .result{
+            font-size: 40px;
+            margin-left: 50px;
+        }
+
+        .btn{
+            background-color: 9966FF ;
+            
+            border: none;
+            border-radius: 10px;
+            color: 000033;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        input[type=number] {
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            padding: 10px;
+        }
+    </style> 
+   <div class="main"> 
+    <div class="head"> 
+     <h2> GCD (Find Greatest Common Division) </h2> 
+    </div> 
+    <div style="text-align: center"> 
+     <input type="number" placeholder="Enter A" id="A" required> 
+     <br> 
+     <br> 
+     <input type="number" placeholder="Enter B" id="B" required> 
+     <br> 
+     <br> <button class="btn" type="button" onclick="getInputValue();">Get Value</button> 
+    </div> 
+    <hr> 
+    <div class="result">
+      GCD = <span id="gcd" style="color: #ff0000"></span> 
+    </div> 
+   </div> 
+   <div style="background-color: #F5F5F5; padding: 2px; bottom: 0; position: fixed; width: 100%;"> 
+   </div> 
+   <script>
+
+    function gcd(a, b) {
+    var R;
+    while ((a % b) > 0)  {
+        R = a % b;
+        a = b;
+        b = R;
+    }
+    return b;
+    }
+
+    function getInputValue(){
+        var A = document.getElementById("A").value;
+        var B = document.getElementById("B").value;
+        console.log(A);
+        console.log(B);
+        document.getElementById("gcd").innerHTML = gcd(A, B); 
+    }
+
+</script> 
+  </section> 
+ </body>
+</html>
